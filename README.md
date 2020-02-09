@@ -4,7 +4,7 @@
 
 **Developer excuses screensaver with video background.**
 
-[![Watch the video](Release/ScreenShot.png)](https://youtu.be/u5VPQrJWI-o)
+[![Watch the video](Release/Screenshot.png)](https://youtu.be/u5VPQrJWI-o)
 
 
 A screensaver which periodically shows a quote from [http://developerexcuses.com](http://developerexcuses.com), with optional video background support.
@@ -34,6 +34,12 @@ Grab the current [Release here](Release/LiveDeveloperExcuses.saver.zip)!
 
 5. Enjoy.
 
+## Where can I get a decent video background?
+
+There are a lot of royalty-free video sites. 
+
+I recommend [Pixabay](https://pixabay.com/videos/) and [Visualdon](https://visualdon.uk/).
+
 
 ### Powered by  [OnelinerKit](https://github.com/kimar/OnelinerKit) and [DeveloperExcueses](https://github.com/kimar/DeveloperExcuses)
 
@@ -49,6 +55,7 @@ Open up *LiveDeveloperExcuses.xcodeproj* using Xcode and hit Cmd+B to build it. 
 - [ ] Shuffle in multiple videos
 - [ ] Font & background style for quote text
 - [ ] Quote text position
+
 
 ## License
 
