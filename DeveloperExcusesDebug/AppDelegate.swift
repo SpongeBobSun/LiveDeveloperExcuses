@@ -20,9 +20,11 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         else {
             preconditionFailure()
         }
-        screenSaverView.frame = window.contentView!.bounds;
+        let vc =  NSStoryboard(name: "Main", bundle: Bundle.main).instantiateController(withIdentifier: "debugVC") as! DebugViewController
+        window.contentViewController = vc
+        screenSaverView.frame = CGRect(x: 0, y: 0, width: window.frame.width, height: window.frame.height)
         screenSaverView.autoresizingMask = [.height, .width]
-        window.contentView!.addSubview(screenSaverView);
+        vc.view.addSubview(screenSaverView, positioned: .below, relativeTo: vc.view)
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {

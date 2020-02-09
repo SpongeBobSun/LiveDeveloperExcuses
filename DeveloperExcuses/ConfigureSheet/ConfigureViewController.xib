@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="15705" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="15705"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="ConfigureViewController" customModule="LiveDeveloperExcuses" customModuleProvider="target">
+            <connections>
+                <outlet property="window" destination="Dip-Z9-fet" id="oF1-dq-orx"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <window title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" restorable="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" id="Dip-Z9-fet">
+            <windowStyleMask key="styleMask" titled="YES" closable="YES"/>
+            <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+            <rect key="contentRect" x="131" y="158" width="480" height="270"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1440" height="877"/>
+            <view key="contentView" id="Lgd-Pu-NTI">
+                <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <tabView translatesAutoresizingMaskIntoConstraints="NO" id="RZh-WS-PZA">
+                        <rect key="frame" x="1" y="-1" width="478" height="272"/>
+                        <font key="font" metaFont="system"/>
+                        <tabViewItems>
+                            <tabViewItem label="Video" identifier="" id="LjP-63-2EV">
+                                <view key="view" id="fn0-8u-4YS">
+                                    <rect key="frame" x="10" y="33" width="458" height="226"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="fBx-Lo-6Qg">
+                                            <rect key="frame" x="14" y="194" width="117" height="16"/>
+                                            <textFieldCell key="cell" lineBreakMode="clipping" title="Background video:" id="Bh1-8r-w7K">
+                                                <font key="font" metaFont="system"/>
+                                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="09n-8m-7X2">
+                                            <rect key="frame" x="14" y="130" width="430" height="48"/>
+                                            <textFieldCell key="cell" selectable="YES" id="OiT-xH-KKJ">
+                                                <font key="font" metaFont="system"/>
+                                                <string key="title">1. Click on button below to open then containing folder
+2. Copy your background video to LiveDevEx folder
+3. Rename your file to "saver.mp4"</string>
+                                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="fsp-jk-z3U">
+                                            <rect key="frame" x="10" y="78" width="156" height="32"/>
+                                            <buttonCell key="cell" type="push" title="Add video to folder" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="vSj-0O-3of">
+                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                <font key="font" metaFont="system"/>
+                                            </buttonCell>
+                                            <connections>
+                                                <action selector="selectVideo:" target="-2" id="Rqm-HB-Mg4"/>
+                                            </connections>
+                                        </button>
+                                        <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="xa8-am-FiB">
+                                            <rect key="frame" x="380" y="-1" width="75" height="32"/>
+                                            <buttonCell key="cell" type="push" title="Close" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="3Re-4h-XYU">
+                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                <font key="font" metaFont="system"/>
+                                            </buttonCell>
+                                            <connections>
+                                                <action selector="onClose:" target="-2" id="ruI-3Y-QbU"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="xa8-am-FiB" secondAttribute="bottom" constant="6" id="RpP-eY-OFj"/>
+                                        <constraint firstItem="fsp-jk-z3U" firstAttribute="top" secondItem="09n-8m-7X2" secondAttribute="bottom" constant="24" id="TyP-X6-ums"/>
+                                        <constraint firstItem="09n-8m-7X2" firstAttribute="top" secondItem="fBx-Lo-6Qg" secondAttribute="bottom" constant="16" id="Wem-iX-7TK"/>
+                                        <constraint firstItem="fsp-jk-z3U" firstAttribute="leading" secondItem="fn0-8u-4YS" secondAttribute="leading" constant="16" id="YM7-Fe-iNA"/>
+                                        <constraint firstItem="09n-8m-7X2" firstAttribute="leading" secondItem="fBx-Lo-6Qg" secondAttribute="leading" id="gVL-Q4-BZr"/>
+                                        <constraint firstAttribute="trailing" secondItem="09n-8m-7X2" secondAttribute="trailing" constant="16" id="h5L-Cd-krT"/>
+                                        <constraint firstAttribute="trailing" secondItem="xa8-am-FiB" secondAttribute="trailing" constant="9" id="lOr-cb-SA7"/>
+                                        <constraint firstItem="fBx-Lo-6Qg" firstAttribute="leading" secondItem="fn0-8u-4YS" secondAttribute="leading" constant="16" id="n3j-g8-aNX"/>
+                                        <constraint firstItem="fBx-Lo-6Qg" firstAttribute="top" secondItem="fn0-8u-4YS" secondAttribute="top" constant="16" id="wRX-iK-0zs"/>
+                                    </constraints>
+                                </view>
+                            </tabViewItem>
+                        </tabViewItems>
+                    </tabView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="RZh-WS-PZA" firstAttribute="top" secondItem="Lgd-Pu-NTI" secondAttribute="top" constant="5" id="Dh4-RT-nxo"/>
+                    <constraint firstAttribute="trailing" secondItem="RZh-WS-PZA" secondAttribute="trailing" constant="8" id="ZXn-5w-baw"/>
+                    <constraint firstItem="RZh-WS-PZA" firstAttribute="leading" secondItem="Lgd-Pu-NTI" secondAttribute="leading" constant="8" id="x43-wg-b8K"/>
+                    <constraint firstAttribute="bottom" secondItem="RZh-WS-PZA" secondAttribute="bottom" constant="9" id="z7g-lt-jkt"/>
+                </constraints>
+            </view>
+            <point key="canvasLocation" x="213" y="-143"/>
+        </window>
+    </objects>
+</document>

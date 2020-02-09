@@ -25,4 +25,5 @@ class DeveloperExcusesView: OnelinerView {
         
         completion(quotes.first!)
     }
+    
 }
