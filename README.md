@@ -1,28 +1,54 @@
-# DeveloperExcuses.saver
+# LiveDeveloperExcuses.saver
 
-[![Twitter: @Kidmar](https://img.shields.io/badge/contact-@Kidmar-blue.svg?style=flat)](https://twitter.com/Kidmar)
 [![License](https://img.shields.io/badge/license-MIT-green.svg?style=flat)](https://github.com/kimar/DeveloperExcuses/blob/master/LICENSE.md)
 
+**Developer excuses screensaver with video background.**
 
-## Proudly powered by [OnelinerKit](https://github.com/kimar/OnelinerKit).
+[![Watch the video](Release/ScreenShot.png)](https://youtu.be/u5VPQrJWI-o)
 
-![Screenshot](Release/Screenshot.png)
 
-Dead simple Screensaver which periodically shows a quote from [http://developerexcuses.com](http://developerexcuses.com), that's it.
+A screensaver which periodically shows a quote from [http://developerexcuses.com](http://developerexcuses.com), with optional video background support.
+
 
 Not officially affiliated with [http://developerexcuses.com](http://developerexcuses.com)
 
-Grab the current [Release here](Release/DeveloperExcuses.saver.zip)!
+Grab the current [Release here](Release/LiveDeveloperExcuses.saver.zip)!
+
+## How to set a video background
+
+1. Open "System Preference.app" and navigate to the "Desktop & Screensaver" panel.
+
+![Preference](imgs/settings.png)
+
+2. Check "LiveDeveloperExcueses" screensaver then click the "Screensaver Options" button.
+
+![Options](imgs/options.png)
+
+3. Click "Add video to folder" button
+
+![Folder](imgs/folder.png)
+
+4. Copy your video into "Movies/LiveDevEx" folder and rename it to "saver.mp4"
+
+![Copy](imgs/copy.png)
+
+5. Enjoy.
+
+
+### Powered by  [OnelinerKit](https://github.com/kimar/OnelinerKit) and [DeveloperExcueses](https://github.com/kimar/DeveloperExcuses)
+
 
 And feel free to fork and contribute ;-)
 
 ## Getting started
 
-Open up *DeveloperExcuses.xcodeproj* using Xcode and hit Cmd+B to build it. That's it.
+Open up *LiveDeveloperExcuses.xcodeproj* using Xcode and hit Cmd+B to build it. That's it.
 
-## Contributing
+## Road map & Todo
 
-As this is only a side-project of mine, there's no roadmap or explicit commitment from my side to fix bugs or add features, however if you'd like to contribute to this project, please feel free to raise a [Pull Request](https://github.com/kimar/DeveloperExcuses/pulls).
+- [ ] Shuffle in multiple videos
+- [ ] Font & background style for quote text
+- [ ] Quote text position
 
 ## License
 
