@@ -6,6 +6,7 @@
 
 [![Watch the video](Release/Screenshot.png)](https://youtu.be/u5VPQrJWI-o)
 
+⬆️Click to view the video on Youtube.
 
 A screensaver which periodically shows a quote from [http://developerexcuses.com](http://developerexcuses.com), with optional video background support.
 
