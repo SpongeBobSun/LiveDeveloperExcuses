@@ -19,19 +19,19 @@ Grab the current [Release here](Release/LiveDeveloperExcuses.saver.zip)!
 
 1. Open "System Preference.app" and navigate to the "Desktop & Screensaver" panel.
 
-![Preference](imgs/settings.png)
+<img src="imgs/settings.png" alt="Preference" style="zoom:50%;" />
 
 2. Check "LiveDeveloperExcueses" screensaver then click the "Screensaver Options" button.
 
-![Options](imgs/options.png)
+<img src="imgs/options.png" alt="Options" style="zoom: 50%;" />
 
 3. Click "Add video to folder" button
 
-![Folder](imgs/folder.png)
+<img src="imgs/folder.png" alt="Folder" style="zoom:50%;" />
 
 4. Copy your video into "Movies/LiveDevEx" folder and rename it to "saver.mp4"
 
-![Copy](imgs/copy.png)
+<img src="imgs/copy.png" alt="Copy" style="zoom: 33%;" />
 
 5. Enjoy.
 
