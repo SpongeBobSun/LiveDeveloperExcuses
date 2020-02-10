@@ -12,6 +12,7 @@ import Cocoa
 class AppDelegate: NSObject, NSApplicationDelegate {
 
     lazy var screenSaverView = DeveloperExcusesView(frame: .zero, isPreview: false)
+    lazy var configureSheet = ConfigureViewController()
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         guard
@@ -25,6 +26,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         screenSaverView.frame = CGRect(x: 0, y: 0, width: window.frame.width, height: window.frame.height)
         screenSaverView.autoresizingMask = [.height, .width]
         vc.view.addSubview(screenSaverView, positioned: .below, relativeTo: vc.view)
+        
+//        NSApplication.shared.runModal(for: configureSheet.window!)
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {

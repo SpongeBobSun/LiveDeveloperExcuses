@@ -12,12 +12,14 @@ import ScreenSaver
 class ConfigureViewController: NSObject {
     
     @IBOutlet var window: NSWindow!
-
+    @IBOutlet weak var interval: NSTextField!
+    
     
     override init() {
         super.init()
         let bundle = Bundle(for: ConfigureViewController.self)
         bundle.loadNibNamed("ConfigureViewController", owner: self, topLevelObjects: nil)
+        interval.stringValue = "\(DefaultsManager.fetchInterval)"
     }
     
     @IBAction func selectVideo(_ sender: Any) {
@@ -33,6 +35,8 @@ class ConfigureViewController: NSObject {
     }
     
     @IBAction func onClose(_ sender: Any) {
+        let value = (interval.stringValue as NSString).intValue
+        DefaultsManager.fetchInterval = Int(value > 0 ? value : 15)
         window.endSheet(window)
     }
 }

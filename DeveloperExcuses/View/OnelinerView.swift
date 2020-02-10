@@ -18,7 +18,7 @@ open class OnelinerView: ScreenSaverView {
     private var backgroundPlayer: NSView!
     private var videoLayer: AVPlayerLayer?
     private var player: AVPlayer?
-    private var fetchingDue = true
+    private var fetching = true
     private var lastFetchDate: Date?
     
     public var backgroundColor = NSColor.black
@@ -110,10 +110,11 @@ open class OnelinerView: ScreenSaverView {
     }
     
     private func initializeFolder() {
-        let url = URL(fileURLWithPath: NSHomeDirectory()).appendingPathComponent("Movies").appendingPathComponent("LiveDevEx")
-        if FileManager.default.fileExists(atPath: url.absoluteString) {
+        let path = NSHomeDirectory().appending("/Movies/LiveDevEx")
+        if FileManager.default.fileExists(atPath: path) {
             return
         }
+        let url = URL(fileURLWithPath: path)
         do {
             try FileManager.default.createDirectory(at: url, withIntermediateDirectories: false, attributes: [:])
         } catch {
@@ -139,7 +140,7 @@ open class OnelinerView: ScreenSaverView {
     }
     
     private func restoreLast() {
-        fetchingDue = true
+        fetching = false
         set(oneliner: UserDefaults.lastOneline)
     }
     
@@ -152,6 +153,9 @@ open class OnelinerView: ScreenSaverView {
     }
     
     private func scheduleNext() {
+        if fetching {
+            return
+        }
         mainQueue.asyncAfter(deadline: .now() + 1) { [weak self] in
             guard let 🕑 = self?.lastFetchDate else {
                 self?.scheduleForFetch()
@@ -166,18 +170,18 @@ open class OnelinerView: ScreenSaverView {
     }
     
     private func scheduleForFetch() {
-        fetchingDue = true
         fetchNext()
     }
     
     private func fetchNext() {
-        if !fetchingDue {
+        if fetching {
             return
         }
-        fetchingDue = false
+        fetching = true
         fetchQueue.sync { [weak self] in
             self?.fetchOneline { oneline in
                 self?.mainQueue.async { [weak self] in
+                    self?.fetching = false
                     self?.lastFetchDate = Date()
                     self?.scheduleNext()
                     self?.set(oneliner: oneline)
@@ -197,6 +201,7 @@ open class OnelinerView: ScreenSaverView {
     override open func removeFromSuperview() {
         player?.pause()
         NotificationCenter.default.removeObserver(self)
+        self.fetching = false
         super.removeFromSuperview()
     }
 }

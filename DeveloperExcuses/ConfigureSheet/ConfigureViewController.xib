@@ -7,6 +7,7 @@
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="ConfigureViewController" customModule="LiveDeveloperExcuses" customModuleProvider="target">
             <connections>
+                <outlet property="interval" destination="cto-Fj-k6g" id="J2B-Dr-7HL"/>
                 <outlet property="window" destination="Dip-Z9-fet" id="oF1-dq-orx"/>
             </connections>
         </customObject>
@@ -22,16 +23,16 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <tabView translatesAutoresizingMaskIntoConstraints="NO" id="RZh-WS-PZA">
-                        <rect key="frame" x="1" y="-1" width="478" height="272"/>
+                        <rect key="frame" x="1" y="37" width="478" height="234"/>
                         <font key="font" metaFont="system"/>
                         <tabViewItems>
                             <tabViewItem label="Video" identifier="" id="LjP-63-2EV">
                                 <view key="view" id="fn0-8u-4YS">
-                                    <rect key="frame" x="10" y="33" width="458" height="226"/>
+                                    <rect key="frame" x="10" y="33" width="458" height="188"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="fBx-Lo-6Qg">
-                                            <rect key="frame" x="14" y="194" width="117" height="16"/>
+                                            <rect key="frame" x="14" y="156" width="117" height="16"/>
                                             <textFieldCell key="cell" lineBreakMode="clipping" title="Background video:" id="Bh1-8r-w7K">
                                                 <font key="font" metaFont="system"/>
                                                 <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -39,7 +40,7 @@
                                             </textFieldCell>
                                         </textField>
                                         <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="09n-8m-7X2">
-                                            <rect key="frame" x="14" y="130" width="430" height="48"/>
+                                            <rect key="frame" x="14" y="92" width="430" height="48"/>
                                             <textFieldCell key="cell" selectable="YES" id="OiT-xH-KKJ">
                                                 <font key="font" metaFont="system"/>
                                                 <string key="title">1. Click on button below to open then containing folder
@@ -50,7 +51,7 @@
                                             </textFieldCell>
                                         </textField>
                                         <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="fsp-jk-z3U">
-                                            <rect key="frame" x="10" y="78" width="156" height="32"/>
+                                            <rect key="frame" x="10" y="40" width="156" height="32"/>
                                             <buttonCell key="cell" type="push" title="Add video to folder" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="vSj-0O-3of">
                                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                 <font key="font" metaFont="system"/>
@@ -59,38 +60,85 @@
                                                 <action selector="selectVideo:" target="-2" id="Rqm-HB-Mg4"/>
                                             </connections>
                                         </button>
-                                        <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="xa8-am-FiB">
-                                            <rect key="frame" x="380" y="-1" width="75" height="32"/>
-                                            <buttonCell key="cell" type="push" title="Close" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="3Re-4h-XYU">
-                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                                <font key="font" metaFont="system"/>
-                                            </buttonCell>
-                                            <connections>
-                                                <action selector="onClose:" target="-2" id="ruI-3Y-QbU"/>
-                                            </connections>
-                                        </button>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstAttribute="bottom" secondItem="xa8-am-FiB" secondAttribute="bottom" constant="6" id="RpP-eY-OFj"/>
                                         <constraint firstItem="fsp-jk-z3U" firstAttribute="top" secondItem="09n-8m-7X2" secondAttribute="bottom" constant="24" id="TyP-X6-ums"/>
                                         <constraint firstItem="09n-8m-7X2" firstAttribute="top" secondItem="fBx-Lo-6Qg" secondAttribute="bottom" constant="16" id="Wem-iX-7TK"/>
                                         <constraint firstItem="fsp-jk-z3U" firstAttribute="leading" secondItem="fn0-8u-4YS" secondAttribute="leading" constant="16" id="YM7-Fe-iNA"/>
                                         <constraint firstItem="09n-8m-7X2" firstAttribute="leading" secondItem="fBx-Lo-6Qg" secondAttribute="leading" id="gVL-Q4-BZr"/>
                                         <constraint firstAttribute="trailing" secondItem="09n-8m-7X2" secondAttribute="trailing" constant="16" id="h5L-Cd-krT"/>
-                                        <constraint firstAttribute="trailing" secondItem="xa8-am-FiB" secondAttribute="trailing" constant="9" id="lOr-cb-SA7"/>
                                         <constraint firstItem="fBx-Lo-6Qg" firstAttribute="leading" secondItem="fn0-8u-4YS" secondAttribute="leading" constant="16" id="n3j-g8-aNX"/>
                                         <constraint firstItem="fBx-Lo-6Qg" firstAttribute="top" secondItem="fn0-8u-4YS" secondAttribute="top" constant="16" id="wRX-iK-0zs"/>
                                     </constraints>
                                 </view>
                             </tabViewItem>
+                            <tabViewItem label="Quote" identifier="" id="ZeI-Ke-VbS">
+                                <view key="view" id="Gg5-CW-V7H">
+                                    <rect key="frame" x="10" y="33" width="458" height="188"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="IBx-yK-zmJ">
+                                            <rect key="frame" x="14" y="156" width="90" height="16"/>
+                                            <textFieldCell key="cell" lineBreakMode="clipping" title="Fetch interval:" id="b8N-Hj-dxL">
+                                                <font key="font" usesAppearanceFont="YES"/>
+                                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="cto-Fj-k6g">
+                                            <rect key="frame" x="110" y="152" width="40" height="20"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="40" id="qIY-KW-nGr"/>
+                                            </constraints>
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="border" alignment="left" drawsBackground="YES" id="l39-AK-CeO">
+                                                <numberFormatter key="formatter" formatterBehavior="default10_4" numberStyle="decimal" minimumIntegerDigits="1" maximumIntegerDigits="2000000000" maximumFractionDigits="3" id="xVr-VR-rIZ"/>
+                                                <font key="font" metaFont="system"/>
+                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                <allowedInputSourceLocales>
+                                                    <string>NSAllRomanInputSourcesLocaleIdentifier</string>
+                                                </allowedInputSourceLocales>
+                                            </textFieldCell>
+                                        </textField>
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="uVq-YT-wep">
+                                            <rect key="frame" x="156" y="156" width="56" height="16"/>
+                                            <textFieldCell key="cell" lineBreakMode="clipping" title="seconds" id="tyK-6y-QWa">
+                                                <font key="font" usesAppearanceFont="YES"/>
+                                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="uVq-YT-wep" firstAttribute="top" secondItem="cto-Fj-k6g" secondAttribute="top" id="1ga-92-RG4"/>
+                                        <constraint firstItem="IBx-yK-zmJ" firstAttribute="leading" secondItem="Gg5-CW-V7H" secondAttribute="leading" constant="16" id="23e-RV-HLo"/>
+                                        <constraint firstItem="IBx-yK-zmJ" firstAttribute="top" secondItem="Gg5-CW-V7H" secondAttribute="top" constant="16" id="K11-o3-niR"/>
+                                        <constraint firstItem="cto-Fj-k6g" firstAttribute="top" secondItem="IBx-yK-zmJ" secondAttribute="top" id="e3B-vT-unF"/>
+                                        <constraint firstItem="cto-Fj-k6g" firstAttribute="leading" secondItem="IBx-yK-zmJ" secondAttribute="trailing" constant="8" id="gd1-Q6-WcP"/>
+                                        <constraint firstItem="uVq-YT-wep" firstAttribute="leading" secondItem="cto-Fj-k6g" secondAttribute="trailing" constant="8" id="nWF-I4-tKP"/>
+                                    </constraints>
+                                </view>
+                            </tabViewItem>
                         </tabViewItems>
                     </tabView>
+                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="xa8-am-FiB">
+                        <rect key="frame" x="395" y="9" width="75" height="32"/>
+                        <buttonCell key="cell" type="push" title="Close" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="3Re-4h-XYU">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="onClose:" target="-2" id="ruI-3Y-QbU"/>
+                        </connections>
+                    </button>
                 </subviews>
                 <constraints>
+                    <constraint firstItem="xa8-am-FiB" firstAttribute="top" secondItem="RZh-WS-PZA" secondAttribute="bottom" constant="10" id="68G-bK-9mw"/>
                     <constraint firstItem="RZh-WS-PZA" firstAttribute="top" secondItem="Lgd-Pu-NTI" secondAttribute="top" constant="5" id="Dh4-RT-nxo"/>
+                    <constraint firstAttribute="trailing" secondItem="xa8-am-FiB" secondAttribute="trailing" constant="16" id="HXD-mF-lP5"/>
+                    <constraint firstAttribute="bottom" secondItem="xa8-am-FiB" secondAttribute="bottom" constant="16" id="Y28-jr-tQN"/>
                     <constraint firstAttribute="trailing" secondItem="RZh-WS-PZA" secondAttribute="trailing" constant="8" id="ZXn-5w-baw"/>
                     <constraint firstItem="RZh-WS-PZA" firstAttribute="leading" secondItem="Lgd-Pu-NTI" secondAttribute="leading" constant="8" id="x43-wg-b8K"/>
-                    <constraint firstAttribute="bottom" secondItem="RZh-WS-PZA" secondAttribute="bottom" constant="9" id="z7g-lt-jkt"/>
                 </constraints>
             </view>
             <point key="canvasLocation" x="213" y="-143"/>

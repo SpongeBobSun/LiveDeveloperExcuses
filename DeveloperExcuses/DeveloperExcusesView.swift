@@ -22,7 +22,7 @@ class DeveloperExcusesView: OnelinerView {
         let quotes = regex.matches(in: string, options: NSRegularExpression.MatchingOptions(rawValue: 0), range: NSRange(location: 0, length: string.lengthOfBytes(using: .utf8))).map { result in
             return (string as NSString).substring(with: result.range(at: 1))
         }
-        
+        debugPrint("Quote: \(quotes.first)")
         completion(quotes.first!)
     }
     

@@ -10,6 +10,6 @@ import Foundation
 
 extension Date {
     func isFetchDue(since: Date) -> Bool {
-        return timeIntervalSinceReferenceDate > since.timeIntervalSinceReferenceDate + .minimumFetchInterval
+        return timeIntervalSinceReferenceDate > since.timeIntervalSinceReferenceDate + Double(DefaultsManager.fetchInterval)
     }
 }
