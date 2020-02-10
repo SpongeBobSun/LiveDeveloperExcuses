@@ -34,6 +34,8 @@
 		C4BFB5B923EF0F6A00F1FDC7 /* ConfigureViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4BFB5B623EF0F6A00F1FDC7 /* ConfigureViewController.xib */; };
 		C4BFB5BA23EF0F6A00F1FDC7 /* ConfigureViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4BFB5B623EF0F6A00F1FDC7 /* ConfigureViewController.xib */; };
 		C4BFB5BE23EF100000F1FDC7 /* DebugViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4BFB5BB23EF100000F1FDC7 /* DebugViewController.swift */; };
+		C4C4B43623F1A85D004CDC8E /* IntervalFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C4B43523F1A85D004CDC8E /* IntervalFormatter.swift */; };
+		C4C4B43723F1A85D004CDC8E /* IntervalFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C4B43523F1A85D004CDC8E /* IntervalFormatter.swift */; };
 		C4EF101F23EFC57C001D16F7 /* ScreenDefaults+DevEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4EF101E23EFC57C001D16F7 /* ScreenDefaults+DevEx.swift */; };
 		C4EF102023EFC57C001D16F7 /* ScreenDefaults+DevEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4EF101E23EFC57C001D16F7 /* ScreenDefaults+DevEx.swift */; };
 /* End PBXBuildFile section */
@@ -79,6 +81,7 @@
 		C4BFB5B523EF0F6A00F1FDC7 /* ConfigureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigureViewController.swift; sourceTree = "<group>"; };
 		C4BFB5B623EF0F6A00F1FDC7 /* ConfigureViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ConfigureViewController.xib; sourceTree = "<group>"; };
 		C4BFB5BB23EF100000F1FDC7 /* DebugViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugViewController.swift; sourceTree = "<group>"; };
+		C4C4B43523F1A85D004CDC8E /* IntervalFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntervalFormatter.swift; sourceTree = "<group>"; };
 		C4EF101E23EFC57C001D16F7 /* ScreenDefaults+DevEx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ScreenDefaults+DevEx.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -203,6 +206,7 @@
 			isa = PBXGroup;
 			children = (
 				C488FA9523EFE7F900855218 /* DefaultsManager.swift */,
+				C4C4B43523F1A85D004CDC8E /* IntervalFormatter.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -354,6 +358,7 @@
 				07F22F0A23EEE68000F939BF /* Date+FetchInterval.swift in Sources */,
 				C4BFB5B823EF0F6A00F1FDC7 /* ConfigureViewController.swift in Sources */,
 				C488FA9723EFE7F900855218 /* DefaultsManager.swift in Sources */,
+				C4C4B43723F1A85D004CDC8E /* IntervalFormatter.swift in Sources */,
 				076642FD1EE92D9500FE8619 /* DeveloperExcusesView.swift in Sources */,
 				076642F11EE92D6D00FE8619 /* AppDelegate.swift in Sources */,
 				07F22F0623EEE67400F939BF /* OnelinerView.swift in Sources */,
@@ -370,6 +375,7 @@
 				077BC2B11DA22D14007DE060 /* DeveloperExcusesView.swift in Sources */,
 				C4EF101F23EFC57C001D16F7 /* ScreenDefaults+DevEx.swift in Sources */,
 				07B5E45B218645DF0005E36F /* UserDefaults+LastLine.swift in Sources */,
+				C4C4B43623F1A85D004CDC8E /* IntervalFormatter.swift in Sources */,
 				07B5E45C218645DF0005E36F /* Date+FetchInterval.swift in Sources */,
 				07B5E459218645DF0005E36F /* String+Constants.swift in Sources */,
 				C488FA9623EFE7F900855218 /* DefaultsManager.swift in Sources */,

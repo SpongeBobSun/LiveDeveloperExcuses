@@ -20,6 +20,7 @@ class ConfigureViewController: NSObject {
         let bundle = Bundle(for: ConfigureViewController.self)
         bundle.loadNibNamed("ConfigureViewController", owner: self, topLevelObjects: nil)
         interval.stringValue = "\(DefaultsManager.fetchInterval)"
+        interval.formatter = IntervalFormatter()
     }
     
     @IBAction func selectVideo(_ sender: Any) {
