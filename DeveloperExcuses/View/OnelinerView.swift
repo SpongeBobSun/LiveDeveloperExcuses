@@ -59,7 +59,7 @@ open class OnelinerView: ScreenSaverView {
     }
     
     override open func animateOneFrame() {
-        fetchNext()
+        return
     }
     
     override open func draw(_ rect: NSRect) {
@@ -178,7 +178,7 @@ open class OnelinerView: ScreenSaverView {
             return
         }
         fetching = true
-        fetchQueue.sync { [weak self] in
+        fetchQueue.async { [weak self] in
             self?.fetchOneline { oneline in
                 self?.mainQueue.async { [weak self] in
                     self?.fetching = false
