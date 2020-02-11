@@ -8,20 +8,40 @@
 
 ⬆️Click to view the video on Youtube.
 
-A screensaver which periodically shows a quote from [http://developerexcuses.com](http://developerexcuses.com), with optional video background support.
+**Or have a dream of Electric Sheep**
+
+![cyber](Release/cyber.png)
+
+
+
+***LiveDeveloperExcuses*** is  a screensaver which periodically shows a quote from [http://developerexcuses.com](http://developerexcuses.com), with optional video background support.
 
 
 Not officially affiliated with [http://developerexcuses.com](http://developerexcuses.com)
 
-Grab the current [Release here](Release/LiveDeveloperExcuses.saver.zip)!
+## Install
 
-## How to set a video background
+### Download
+
+Grab the latest [release here](https://github.com/SpongeBobSun/LiveDeveloperExcuses/releases)!
+
+### Install
+
+Since I haven't figure out how to sign a screensaver properly, you might suffer some minor signing issues.
+
+After unzipped the latest release, you need to right-click the `.saver` file then choose open instead of double-click it. Then you need to click on the open button in following popup dialog.
+
+<img src="imgs/right-click.png" alt="right-click" style="zoom:100%;" />
+
+
+
+## Set a video background
 
 1. Open "System Preference.app" and navigate to the "Desktop & Screensaver" panel.
 
 <img src="imgs/settings.png" alt="Preference" style="zoom:50%;" />
 
-2. Check "LiveDeveloperExcueses" screensaver then click the "Screensaver Options" button.
+2. Check "LiveDeveloperExcuses" screensaver then click the "Screensaver Options" button.
 
 <img src="imgs/options.png" alt="Options" style="zoom: 50%;" />
 
@@ -29,7 +49,7 @@ Grab the current [Release here](Release/LiveDeveloperExcuses.saver.zip)!
 
 <img src="imgs/folder.png" alt="Folder" style="zoom:50%;" />
 
-4. Copy your video into "Movies/LiveDevEx" folder and rename it to "saver.mp4"
+4. Copy your video into "Movies/LiveDevEx" folder
 
 <img src="imgs/copy.png" alt="Copy" style="zoom: 33%;" />
 
@@ -53,7 +73,8 @@ Open up *LiveDeveloperExcuses.xcodeproj* using Xcode and hit Cmd+B to build it. 
 
 ## Road map & Todo
 
-- [ ] Shuffle in multiple videos
+- [x] Shuffle in multiple videos
+- [x] Quote fetching interval
 - [ ] Font & background style for quote text
 - [ ] Quote text position
 
