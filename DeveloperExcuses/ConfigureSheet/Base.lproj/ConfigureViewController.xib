@@ -13,11 +13,11 @@
         </customObject>
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
-        <window title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" restorable="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" id="Dip-Z9-fet">
+        <window title="Settings" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" restorable="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" id="Dip-Z9-fet">
             <windowStyleMask key="styleMask" titled="YES" closable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="131" y="158" width="480" height="270"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="1440" height="877"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1440" height="900"/>
             <view key="contentView" id="Lgd-Pu-NTI">
                 <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
                 <autoresizingMask key="autoresizingMask"/>
@@ -44,8 +44,8 @@
                                             <textFieldCell key="cell" selectable="YES" id="OiT-xH-KKJ">
                                                 <font key="font" metaFont="system"/>
                                                 <string key="title">1. Click on button below to open then containing folder
-2. Copy your background video to LiveDevEx folder
-3. Rename your file to "saver.mp4"</string>
+2. Copy your background video(s) to LiveDevEx folder
+3. Support ".mp4" file only</string>
                                                 <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                                 <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
@@ -101,8 +101,8 @@
                                             </textFieldCell>
                                         </textField>
                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="uVq-YT-wep">
-                                            <rect key="frame" x="156" y="156" width="56" height="16"/>
-                                            <textFieldCell key="cell" lineBreakMode="clipping" title="seconds" id="tyK-6y-QWa">
+                                            <rect key="frame" x="156" y="156" width="65" height="16"/>
+                                            <textFieldCell key="cell" lineBreakMode="clipping" title="second(s)" id="tyK-6y-QWa">
                                                 <font key="font" usesAppearanceFont="YES"/>
                                                 <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                                 <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>

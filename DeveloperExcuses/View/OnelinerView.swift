@@ -15,9 +15,13 @@ open class OnelinerView: ScreenSaverView {
     
     private var label: NSTextField!
     private var wrapper: NSView!
+    
     private var backgroundPlayer: NSView!
     private var videoLayer: AVPlayerLayer?
-    private var player: AVPlayer?
+    private var files: [String] = []
+    private var index = 0
+    private var fading = false
+    
     private var fetching = true
     private var lastFetchDate: Date?
     
@@ -25,6 +29,7 @@ open class OnelinerView: ScreenSaverView {
     public var textColor = NSColor.white
     
     var configureVC: ConfigureViewController = ConfigureViewController()
+    
     
     convenience init() {
         self.init(frame: .zero, isPreview: false)
@@ -87,26 +92,46 @@ open class OnelinerView: ScreenSaverView {
     }
     
     private func initializePlayer() {
-        let path = NSHomeDirectory() + "/Movies/LiveDevEx/saver.mp4"
+//        let path = NSHomeDirectory() + "/Movies/LiveDevEx/saver.mp4"
+        let folder = NSHomeDirectory() + "/Movies/LiveDevEx/"
+
+        do {
+            try files = FileManager.default.contentsOfDirectory(atPath: folder)
+            files = files.filter { (each) -> Bool in
+                return each.hasSuffix(".mp4")
+            }.map({ (each) -> String in
+                return folder.appending(each)
+            })
+        } catch {
+            debugPrint(error)
+            return
+        }
+        if files.count == 0 {
+            return
+        }
+        
+        let path = files[index]
+
         if !FileManager.default.fileExists(atPath: path) {
             return
         }
 
         self.backgroundPlayer.wantsLayer = true
         let url = NSURL.fileURL(withPath: path)
-        player = AVPlayer(url: url)
-        player?.isMuted = true
+        let player = AVPlayer(url: url)
+        player.isMuted = true
 
         NotificationCenter.default.addObserver(
             self,
             selector: #selector(self.onVideoReachedEnd(notification:)),
             name: .AVPlayerItemDidPlayToEndTime,
-            object: player?.currentItem)
+            object: player.currentItem)
 
         videoLayer = AVPlayerLayer(player: player)
         videoLayer?.videoGravity = .resizeAspectFill
+        addFadeToPlayer()
         backgroundPlayer.layer?.addSublayer(videoLayer!)
-        player?.play()
+        player.play()
     }
     
     private func initializeFolder() {
@@ -191,15 +216,70 @@ open class OnelinerView: ScreenSaverView {
     }
 
     @objc func onVideoReachedEnd(notification: NSNotification) {
-        guard let item = notification.object as? AVPlayerItem else {
+        NotificationCenter.default.removeObserver(self, name: .AVPlayerItemDidPlayToEndTime, object: self.videoLayer?.player?.currentItem)
+        if index == files.count - 1 {
+            index = 0
+        } else {
+            index += 1
+        }
+        let path = files[index]
+
+        if !FileManager.default.fileExists(atPath: path) {
+            guard let item = notification.object as? AVPlayerItem else {
+                return
+            }
+            item.seek(to: CMTime.zero)
+        } else {
+            let item = AVPlayerItem(url: URL(fileURLWithPath: path))
+            videoLayer?.player = AVPlayer(playerItem: item)
+        }
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(self.onVideoReachedEnd(notification:)),
+            name: .AVPlayerItemDidPlayToEndTime,
+            object: videoLayer?.player?.currentItem
+        )
+        addFadeToPlayer()
+        videoLayer?.player?.play()
+        
+    }
+    
+    private func addFadeToPlayer() {
+        if files.count <= 1 {
             return
         }
-        item.seek(to: CMTime.zero)
-        player?.play()
+        let timeScale = CMTimeScale(NSEC_PER_SEC)
+        let time = CMTime(seconds: 0.8, preferredTimescale: timeScale)
+
+        videoLayer?.player?.addPeriodicTimeObserver(forInterval: time, queue: .main, using: { [weak self] time in
+            let seconds = time.seconds
+            let total = self?.videoLayer?.player?.currentItem?.duration.seconds ?? seconds + 1
+            if total - seconds  < 1 && !(self?.fading ?? true) {
+                self?.fading = true
+                CATransaction.begin()
+                let fade = CABasicAnimation()
+                fade.keyPath = "opacity"
+                fade.fromValue = 1
+                fade.toValue = 0
+                fade.beginTime = CACurrentMediaTime()
+                fade.duration = 1
+                fade.autoreverses = true
+                fade.timingFunction = CAMediaTimingFunction(name:CAMediaTimingFunctionName.easeInEaseOut)
+                fade.fillMode = .forwards
+                
+                CATransaction.setCompletionBlock {
+                    self?.videoLayer?.removeAllAnimations()
+                    self?.fading = false
+                }
+                self?.videoLayer?.add(fade, forKey: "faded")
+                CATransaction.commit()
+            }
+        })
+        
     }
     
     override open func removeFromSuperview() {
-        player?.pause()
+        self.videoLayer?.player?.pause()
         NotificationCenter.default.removeObserver(self)
         self.fetching = false
         super.removeFromSuperview()

@@ -31,11 +31,11 @@
 		C488FA9723EFE7F900855218 /* DefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C488FA9523EFE7F900855218 /* DefaultsManager.swift */; };
 		C4BFB5B723EF0F6A00F1FDC7 /* ConfigureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4BFB5B523EF0F6A00F1FDC7 /* ConfigureViewController.swift */; };
 		C4BFB5B823EF0F6A00F1FDC7 /* ConfigureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4BFB5B523EF0F6A00F1FDC7 /* ConfigureViewController.swift */; };
-		C4BFB5B923EF0F6A00F1FDC7 /* ConfigureViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4BFB5B623EF0F6A00F1FDC7 /* ConfigureViewController.xib */; };
-		C4BFB5BA23EF0F6A00F1FDC7 /* ConfigureViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4BFB5B623EF0F6A00F1FDC7 /* ConfigureViewController.xib */; };
 		C4BFB5BE23EF100000F1FDC7 /* DebugViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4BFB5BB23EF100000F1FDC7 /* DebugViewController.swift */; };
 		C4C4B43623F1A85D004CDC8E /* IntervalFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C4B43523F1A85D004CDC8E /* IntervalFormatter.swift */; };
 		C4C4B43723F1A85D004CDC8E /* IntervalFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C4B43523F1A85D004CDC8E /* IntervalFormatter.swift */; };
+		C4C4B43823F2D271004CDC8E /* ConfigureViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4C4B43B23F2D271004CDC8E /* ConfigureViewController.xib */; };
+		C4C4B43923F2D271004CDC8E /* ConfigureViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4C4B43B23F2D271004CDC8E /* ConfigureViewController.xib */; };
 		C4EF101F23EFC57C001D16F7 /* ScreenDefaults+DevEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4EF101E23EFC57C001D16F7 /* ScreenDefaults+DevEx.swift */; };
 		C4EF102023EFC57C001D16F7 /* ScreenDefaults+DevEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4EF101E23EFC57C001D16F7 /* ScreenDefaults+DevEx.swift */; };
 /* End PBXBuildFile section */
@@ -79,9 +79,11 @@
 		811780311D80B5DD00127177 /* thumbnail.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = thumbnail.png; sourceTree = "<group>"; };
 		C488FA9523EFE7F900855218 /* DefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultsManager.swift; sourceTree = "<group>"; };
 		C4BFB5B523EF0F6A00F1FDC7 /* ConfigureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigureViewController.swift; sourceTree = "<group>"; };
-		C4BFB5B623EF0F6A00F1FDC7 /* ConfigureViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ConfigureViewController.xib; sourceTree = "<group>"; };
 		C4BFB5BB23EF100000F1FDC7 /* DebugViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugViewController.swift; sourceTree = "<group>"; };
 		C4C4B43523F1A85D004CDC8E /* IntervalFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntervalFormatter.swift; sourceTree = "<group>"; };
+		C4C4B43A23F2D271004CDC8E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/ConfigureViewController.xib; sourceTree = "<group>"; };
+		C4C4B43C23F2D2B7004CDC8E /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/ConfigureViewController.strings"; sourceTree = "<group>"; };
+		C4C4B43D23F2D2B7004CDC8E /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		C4EF101E23EFC57C001D16F7 /* ScreenDefaults+DevEx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ScreenDefaults+DevEx.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -215,7 +217,7 @@
 			isa = PBXGroup;
 			children = (
 				C4BFB5B523EF0F6A00F1FDC7 /* ConfigureViewController.swift */,
-				C4BFB5B623EF0F6A00F1FDC7 /* ConfigureViewController.xib */,
+				C4C4B43B23F2D271004CDC8E /* ConfigureViewController.xib */,
 			);
 			path = ConfigureSheet;
 			sourceTree = "<group>";
@@ -300,6 +302,7 @@
 				English,
 				en,
 				Base,
+				"zh-Hans",
 			);
 			mainGroup = 2A9D0E5917DB87B300DBFFBD;
 			productRefGroup = 2A9D0E6517DB87B300DBFFBD /* Products */;
@@ -318,7 +321,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				076642F51EE92D6D00FE8619 /* Assets.xcassets in Resources */,
-				C4BFB5BA23EF0F6A00F1FDC7 /* ConfigureViewController.xib in Resources */,
+				C4C4B43923F2D271004CDC8E /* ConfigureViewController.xib in Resources */,
 				076643011EE92E8B00FE8619 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -328,7 +331,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2A9D0E7417DB87B300DBFFBD /* InfoPlist.strings in Resources */,
-				C4BFB5B923EF0F6A00F1FDC7 /* ConfigureViewController.xib in Resources */,
+				C4C4B43823F2D271004CDC8E /* ConfigureViewController.xib in Resources */,
 				8117802E1D80A79F00127177 /* thumbnail@2x.png in Resources */,
 				811780321D80B5DD00127177 /* thumbnail.png in Resources */,
 			);
@@ -390,8 +393,18 @@
 			isa = PBXVariantGroup;
 			children = (
 				2A9D0E7317DB87B300DBFFBD /* en */,
+				C4C4B43D23F2D2B7004CDC8E /* zh-Hans */,
 			);
 			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		C4C4B43B23F2D271004CDC8E /* ConfigureViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C4C4B43A23F2D271004CDC8E /* Base */,
+				C4C4B43C23F2D2B7004CDC8E /* zh-Hans */,
+			);
+			name = ConfigureViewController.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

@@ -1,0 +1,27 @@
+
+/* Class = "NSButtonCell"; title = "Close"; ObjectID = "3Re-4h-XYU"; */
+"3Re-4h-XYU.title" = "关闭";
+
+/* Class = "NSTextFieldCell"; title = "Background video:"; ObjectID = "Bh1-8r-w7K"; */
+"Bh1-8r-w7K.title" = "背景视频:";
+
+/* Class = "NSWindow"; title = "Window"; ObjectID = "Dip-Z9-fet"; */
+"Dip-Z9-fet.title" = "设置";
+
+/* Class = "NSTabViewItem"; label = "Video"; ObjectID = "LjP-63-2EV"; */
+"LjP-63-2EV.label" = "视频";
+
+/* Class = "NSTextFieldCell"; title = "1. Click on button below to open then containing folder\n2. Copy your background video(s) to LiveDevEx folder\n3. Support \".mp4\" file only"; ObjectID = "OiT-xH-KKJ"; */
+"OiT-xH-KKJ.title" = "1. 点击下面的按钮打开背景视频文件夹\n2. 把背景视频拷贝到 LiveDevEx 文件夹\n3. 只支持\".mp4\"格式的文件";
+
+/* Class = "NSTabViewItem"; label = "Quote"; ObjectID = "ZeI-Ke-VbS"; */
+"ZeI-Ke-VbS.label" = "引语";
+
+/* Class = "NSTextFieldCell"; title = "Fetch interval:"; ObjectID = "b8N-Hj-dxL"; */
+"b8N-Hj-dxL.title" = "刷新间隔:";
+
+/* Class = "NSTextFieldCell"; title = "second(s)"; ObjectID = "tyK-6y-QWa"; */
+"tyK-6y-QWa.title" = "秒";
+
+/* Class = "NSButtonCell"; title = "Add video to folder"; ObjectID = "vSj-0O-3of"; */
+"vSj-0O-3of.title" = "向文件夹内添加视频";
