@@ -216,6 +216,12 @@ open class OnelinerView: ScreenSaverView {
     }
 
     @objc func onVideoReachedEnd(notification: NSNotification) {
+        if files.count == 1 {
+            let item = videoLayer?.player?.currentItem
+            item?.seek(to: .zero)
+            videoLayer?.player?.play()
+            return
+        }
         NotificationCenter.default.removeObserver(self, name: .AVPlayerItemDidPlayToEndTime, object: self.videoLayer?.player?.currentItem)
         if index == files.count - 1 {
             index = 0
